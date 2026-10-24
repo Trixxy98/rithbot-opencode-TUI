@@ -2,6 +2,8 @@
 
 An original ASCII mascot for the **OpenCode V2 terminal UI**. It follows live session and tool events without reading prompts or changing the agent. The right sidebar shows a compact companion when the host displays a sidebar; a palette command opens a dedicated mascot page.
 
+The mascot card uses the active OpenCode theme for its surface, secondary text and status accents. Its sidebar copy stays short, while the fallback page includes a short description. Color and animation are supplementary: every state has a visible text label, and the existing animation toggle keeps static mode available.
+
 **Status: local-development alpha.** On macOS with OpenCode CLI v2.1.1, the project-local plugin was discovered in a pseudo-terminal. Both palette commands and the ASCII fallback page rendered; in a 190-column session, the sidebar rendered the sprite with “Thinking...” during a harmless model request and later “Ready.” Tool-call and error transitions remain unverified. Not published to npm. Do not treat the image or concept in `Docs/` as a verified screenshot.
 
 ## Try locally

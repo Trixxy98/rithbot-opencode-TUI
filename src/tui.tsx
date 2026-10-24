@@ -16,9 +16,10 @@ export default Plugin.define({
     const route = context.ui.router.register({
       name: "rithbot",
       render: ({ data }) => (
-        <box flexDirection="column" alignItems="center" justifyContent="center" flexGrow={1}>
+        <box flexDirection="column" alignItems="center" justifyContent="center" flexGrow={1} width="100%" paddingLeft={1} paddingRight={1}>
           <Mascot value={adapter.get(typeof data?.sessionID === "string" ? data.sessionID : undefined)} settings={config()} />
-          <text fg={context.theme.text.base}>Open a session to watch RithBot react to activity.</text>
+          <text fg={context.theme.text.muted}>Your companion</text>
+          <text fg={context.theme.text.muted}>Open a session to watch.</text>
         </box>
       ),
     })
