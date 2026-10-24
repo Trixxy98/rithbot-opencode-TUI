@@ -1,0 +1,27 @@
+{
+  "name": "rithbot-opencode",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "type": "module",
+  "exports": { "./tui": "./src/tui.tsx" },
+  "dependencies": { "@opencode/plugin": "2.1.1" },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "esbuild src/tui.tsx --bundle --platform=node --format=esm --jsx=automatic --jsx-import-source=@opentui/solid --external:@opencode/plugin/tui --external:@opentui/solid --external:solid-js --outfile=dist/tui.js",
+    "check": "npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@opentui/core": "0.6.8",
+    "@opentui/solid": "0.6.8",
+    "esbuild": "0.25.12",
+    "solid-js": "1.9.12",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.6.6",
+    "@opentui/solid": ">=0.6.6",
+    "solid-js": ">=1.9.0"
+  }
+}
